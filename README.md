@@ -1,7 +1,7 @@
 # papder-deepread
 # paper-deep-dive · 论文深度解读 Skill
 
-一个给 Claude 用的 skill：把一篇论文拆成**两段式解读**。先讲清“论文说了什么”，再用第一性原理回答“为什么这么做、创新在哪、哪里站不住、这个 idea 是怎么想出来的”。
+一个给Agent用的 skill：把一篇论文拆成**两段式解读**。先讲清“论文说了什么”，再用第一性原理回答“为什么这么做、创新在哪、哪里站不住、这个 idea 是怎么想出来的”。
 
 默认读者是**有基础机器学习常识的本科生**：深度不打折，但每个术语都会解释，公式都会逐符号说明。
 
@@ -29,20 +29,10 @@
 
 ## 安装
 
-### Claude.ai / Claude 桌面端（Cowork）
-
-1. 下载本文件夹（包含 `SKILL.md` 和 `README.md`），打包成 zip。
+1. 下载本文件夹（包含 `SKILL.md` 和 `README.md`），打包成 zip。(或者直接提供链接给Agent自行执行）
 2. 打开 **Settings → Capabilities → Skills**（不同版本入口名称可能略有差异），选择上传 skill，上传这个 zip。
 3. 确认 skill 已启用。
-
-### Claude Code
-
-把整个文件夹放到以下任一位置：
-
-```
-~/.claude/skills/paper-deep-dive/SKILL.md        # 全局可用
-<你的项目>/.claude/skills/paper-deep-dive/SKILL.md # 仅当前项目
-```
+   
 
 ### 其他支持 system prompt 的工具
 
@@ -58,6 +48,7 @@
 深度解读一下这篇论文 [附上 PDF]
 精读 arXiv 2005.14165
 分析这篇论文：Attention Is All You Need
+（附录里有一个现场的文档可以查看效果）
 ```
 
 也可以直接指定：`/paper-deep-dive` + 论文 PDF / 链接 / 标题。
